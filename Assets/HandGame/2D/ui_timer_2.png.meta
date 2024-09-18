@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: be94e3d1789f3f340bd0ef6008710f38
+guid: 721afbd0091c2d9408a8ef061d0476fe
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -2385296423360839614
-    second: enemy_shake_0
+      213: -3392450223579435464
+    second: ui_timer_2_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: enemy_shake_0
+      name: ui_timer_2_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 607
-        height: 588
+        width: 187
+        height: 232
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 24041917a89b5eed0800000000000000
-      internalID: -2385296423360839614
+      spriteID: 83e6a51ee789be0d0800000000000000
+      internalID: -3392450223579435464
       vertices: []
       indices: 
       edges: []
@@ -134,8 +134,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      enemy_shake_0: -2385296423360839614
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
