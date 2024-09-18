@@ -18,7 +18,9 @@ public class ChangeHand : MonoBehaviour
     List<Sprite> leftplayerSprite = new List<Sprite>();
     [SerializeField]
     List<Sprite> rightplayerSprite = new List<Sprite>();
+    [SerializeField]
     private float updateInterval = 0.3f;
+    public bool shouldMove = true;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -61,13 +63,15 @@ public class ChangeHand : MonoBehaviour
 
     public void YouWin()
     {
-        
+        shouldMove = false;
+        IsHandFixed = true ;
         Debug.Log("You win");
     }
 
     public void YouLose()
     {
         IsHandFixed = true;
+        shouldMove = false;
         Debug.Log("You Lose");
     }
 

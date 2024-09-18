@@ -7,7 +7,7 @@ public class MovePlayer : MonoBehaviour
 
     void Update()
     {
-        if (target != null)
+        if (target != null && ChangeHand.Instance.shouldMove)
         {
             // Get the current position and target position in 2D (x, y only)
             Vector2 currentPosition = transform.position;
