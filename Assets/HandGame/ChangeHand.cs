@@ -2,6 +2,7 @@ using NUnit.Framework;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class ChangeHand : MonoBehaviour
 {
@@ -21,9 +22,14 @@ public class ChangeHand : MonoBehaviour
     [SerializeField]
     private float updateInterval = 0.3f;
     public bool shouldMove = true;
+    [SerializeField]
+    GameObject decisionpanel;
+    [SerializeField]
+    List<Sprite> decisionSprites = new List<Sprite>();
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        decisionpanel.GetComponent<SpriteRenderer>().sprite = decisionSprites[0];
         int initialNumber  = Random.Range(0, leftplayerSprite.Count);
         leftHand.GetComponent<SpriteRenderer>().sprite = leftplayerSprite[initialNumber];
         leftHand.GetComponent<HandData>().HandSpriteNumber = initialNumber;
@@ -65,6 +71,8 @@ public class ChangeHand : MonoBehaviour
     {
         shouldMove = false;
         IsHandFixed = true ;
+        decisionpanel.GetComponent<SpriteRenderer>().sprite = decisionSprites[1];
+        StartCoroutine(LoadSceneAfterSomeTime(0));
         Debug.Log("You win");
     }
 
@@ -72,6 +80,8 @@ public class ChangeHand : MonoBehaviour
     {
         IsHandFixed = true;
         shouldMove = false;
+        decisionpanel.GetComponent<SpriteRenderer>().sprite = decisionSprites[2];
+        StartCoroutine(LoadSceneAfterSomeTime(0));
         Debug.Log("You Lose");
     }
 
@@ -89,6 +99,15 @@ public class ChangeHand : MonoBehaviour
             yield return new WaitForSeconds(updateInterval);
         }
     }
+
+    IEnumerator LoadSceneAfterSomeTime(int sceneNumber)
+    {
+        
+            yield return new WaitForSeconds(3f);
+            SceneManager.LoadScene(sceneNumber);
+
+    }
+    
 
 
 }
