@@ -72,7 +72,7 @@ public class ChangeHand : MonoBehaviour
         shouldMove = false;
         IsHandFixed = true ;
         decisionpanel.GetComponent<SpriteRenderer>().sprite = decisionSprites[1];
-        StartCoroutine(GameManager.instance.LoadSceneAfterSomeTime(1));
+       // StartCoroutine(GameManager.instance.LoadSceneAfterSomeTime(1));
         Debug.Log("You win");
     }
 
@@ -81,7 +81,7 @@ public class ChangeHand : MonoBehaviour
         IsHandFixed = true;
         shouldMove = false;
         decisionpanel.GetComponent<SpriteRenderer>().sprite = decisionSprites[2];
-        StartCoroutine(GameManager.instance.LoadSceneAfterSomeTime(0));
+        //StartCoroutine(GameManager.instance.LoadSceneAfterSomeTime(0));
         Debug.Log("You Lose");
     }
 
