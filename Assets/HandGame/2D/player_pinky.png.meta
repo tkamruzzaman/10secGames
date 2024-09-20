@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      player_pinky_0: 6486239312511319695
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
