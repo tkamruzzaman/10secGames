@@ -9,6 +9,7 @@ public class HandData : MonoBehaviour
         
         if (other.CompareTag("Player"))
         {
+            ChangeHand.Instance.GameStopped = true;
             if (other.GetComponent<HandData>().HandSpriteNumber== this.HandSpriteNumber)
             {
                 ChangeHand.Instance.YouWin();

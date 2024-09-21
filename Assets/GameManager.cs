@@ -1,4 +1,5 @@
 using System.Collections;
+using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -12,7 +13,7 @@ public class GameManager : MonoBehaviour
     public float countdownTime = 10f;
 
     // This will hold the current countdown value
-    private float currentTime;
+    public float currentTime;
 
     // Flag to check if the timer is running
     private bool isTimerRunning = false;
@@ -21,10 +22,19 @@ public class GameManager : MonoBehaviour
 
     public int LifeCounter=5;
 
+    public TextMeshProUGUI timer;
+    
+
     void Start()
     {
         // Start the countdown when the game starts
         StartCountdown();
+        timer.SetText ( " ");
+    }
+
+    private void Awake()
+    {
+        instance = this;
     }
 
     // Function to start the countdown
@@ -44,10 +54,13 @@ public class GameManager : MonoBehaviour
 
             // Clamp the current time to zero (in case it goes negative)
             currentTime = Mathf.Max(currentTime, 0);
-
+            int currenTimeonint = (int)currentTime;
             // Debug the remaining time
-            Debug.Log("Time remaining: " + Mathf.Ceil(currentTime));
-
+            //Debug.Log("Time remaining: " + Mathf.Ceil(currentTime));
+            if (currenTimeonint < 4)
+            {
+                timer.SetText(currenTimeonint.ToString());
+            }
             // Check if the timer has finished
             if (currentTime <= 0)
             {

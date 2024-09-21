@@ -23,15 +23,33 @@ public class ChangeHand : MonoBehaviour
     GameObject decisionpanel;
     [SerializeField]
     List<Sprite> decisionSprites = new List<Sprite>();
+    int intitialNumberForLeftHand;
+    bool initialState;
+    public bool GameStopped;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        Random.InitState(System.DateTime.Now.Millisecond);
+
         decisionpanel.GetComponent<SpriteRenderer>().sprite = decisionSprites[0];
         int initialNumber = Random.Range(0, leftplayerGameObject.Count);
+
+        // Initialize initialNumberForLeftHand with the same value as initialNumber to ensure the loop starts
+        intitialNumberForLeftHand = initialNumber;
+
+        // Keep randomizing initialNumberForLeftHand until it's different from initialNumber
+        while (intitialNumberForLeftHand == initialNumber)
+        {
+            intitialNumberForLeftHand = Random.Range(0, rightplayerGameObject.Count);
+        }
         leftplayerGameObject[initialNumber].SetActive(true);
         leftplayerGameObject[initialNumber].GetComponent<HandData>().HandSpriteNumber = initialNumber;
 
-        StartCoroutine(CallChangeGraphicsPeriodically());
+        rightplayerGameObject[intitialNumberForLeftHand].SetActive(true);
+        rightplayerGameObject[intitialNumberForLeftHand].GetComponent<HandData>().HandSpriteNumber = intitialNumberForLeftHand;
+        initialState = true;
+
+        // StartCoroutine(CallChangeGraphicsPeriodically());
     }
     private void Awake()
     {
@@ -41,10 +59,34 @@ public class ChangeHand : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Space)&& !GameStopped)
         {
+            if (initialState) {
 
-            IsHandFixed = true;
+                rightplayerGameObject[intitialNumberForLeftHand].SetActive(false);
+                initialState = false;
+            
+            }
+
+            //IsHandFixed = true;
+
+            if (i >= rightplayerGameObject.Count || i == 0)
+            {
+                i = 0;
+                rightplayerGameObject[rightplayerGameObject.Count - 1].SetActive(false);
+            }
+            else
+            {
+
+                rightplayerGameObject[i - 1].SetActive(false);
+
+            }
+
+
+            rightplayerGameObject[i].SetActive(true);
+            rightplayerGameObject[i].GetComponent<HandData>().HandSpriteNumber = i;
+            i++;
+
         }
     }
 
@@ -78,8 +120,12 @@ public class ChangeHand : MonoBehaviour
         shouldMove = false;
         IsHandFixed = true;
         decisionpanel.GetComponent<SpriteRenderer>().sprite = decisionSprites[1];
-        StartCoroutine(LoadSceneAfterSomeTime(0));
+        // StartCoroutine(GameManager.instance.LoadSceneAfterSomeTime(1));
         Debug.Log("You win");
+        if (GameManager.instance.currentTime > 4)
+        {
+            GameManager.instance.currentTime = 4;
+        }
     }
 
     public void YouLose()
@@ -87,8 +133,12 @@ public class ChangeHand : MonoBehaviour
         IsHandFixed = true;
         shouldMove = false;
         decisionpanel.GetComponent<SpriteRenderer>().sprite = decisionSprites[2];
-        StartCoroutine(LoadSceneAfterSomeTime(0));
+        //StartCoroutine(GameManager.instance.LoadSceneAfterSomeTime(0));
         Debug.Log("You Lose");
+        if (GameManager.instance.currentTime > 4)
+        {
+            GameManager.instance.currentTime = 4;
+        }
     }
 
 
@@ -113,6 +163,7 @@ public class ChangeHand : MonoBehaviour
         SceneManager.LoadScene(sceneNumber);
 
     }
+
 
 
 
