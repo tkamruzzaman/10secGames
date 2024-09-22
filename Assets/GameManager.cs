@@ -25,6 +25,8 @@ public class GameManager : MonoBehaviour
     public TextMeshProUGUI timer;
     int i = 0;
 
+    public bool dontShowTimer;
+
     void Start()
     {
         // Start the countdown when the game starts
@@ -57,7 +59,7 @@ public class GameManager : MonoBehaviour
             int currenTimeonint = (int)currentTime;
             // Debug the remaining time
             //Debug.Log("Time remaining: " + Mathf.Ceil(currentTime));
-            if (currenTimeonint < 4)
+            if (currenTimeonint < 4 && !dontShowTimer)
             {
                 timer.SetText(currenTimeonint.ToString());
             }

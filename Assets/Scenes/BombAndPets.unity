@@ -2732,6 +2732,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 33132729e64114f5e81be32e5bde207f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  winSprite: {fileID: -6358674767003279365, guid: eb406a6f80cf94a5691efdb6510af9de, type: 3}
+  DecisionPanel: {fileID: 1487625117}
 --- !u!114 &1158645848
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2744,11 +2746,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dccec65ef504b9b408549960b6689c0a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  countdownTime: 5
+  countdownTime: 7
   currentTime: 0
   isWinCondition: 0
   LifeCounter: 5
   timer: {fileID: 309957325}
+  dontShowTimer: 0
 --- !u!1 &1158746585
 GameObject:
   m_ObjectHideFlags: 0

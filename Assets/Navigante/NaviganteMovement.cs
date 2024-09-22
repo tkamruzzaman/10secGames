@@ -42,8 +42,15 @@ public class NaviganteMovement : MonoBehaviour
         MovePassanger();
         MovePassanger2();
 
-        
 
+        if (GameManager.instance.currentTime < 1 && !isPaused)
+        {
+            isPaused = true;
+            GameManager.instance.currentTime = 3;
+            GameManager.instance.dontShowTimer = true;
+            YouLose();
+            
+        }
 
 
 
@@ -79,19 +86,7 @@ public class NaviganteMovement : MonoBehaviour
             }
             else
             {
-                GameManager.instance.isWinCondition = false;
-                SlideDoorLeft(gameDoorRight, 0.1f, 0.5f);
-                SlideDoorRight(gameDoorLeft, 0.1f, 0.5f);
-                passangerTarget = passangerLossTarget;
-                passanger2Target = passangerWinTarget;
-                canPassangerMove = true;
-                canPassanger2Move= true;
-                StartHopping();
-                StartHopping2();    
-                Debug.Log("You loose");
-                decisionPanel.GetComponent<SpriteRenderer>().sprite = decisionSprites[2];
-                gameDoorLeft.GetComponent<SpriteRenderer>().color = Color.red;
-                gameDoorRight.GetComponent<SpriteRenderer>().color = Color.red;
+                YouLose();
                 //StartCoroutine(GameManager.instance.LoadSceneAfterSomeTime(1));
                 if (GameManager.instance.currentTime > 4)
                 {
@@ -244,6 +239,21 @@ public class NaviganteMovement : MonoBehaviour
 
     }
 
-
+    void YouLose()
+    {
+        GameManager.instance.isWinCondition = false;
+        SlideDoorLeft(gameDoorRight, 0.1f, 0.5f);
+        SlideDoorRight(gameDoorLeft, 0.1f, 0.5f);
+        passangerTarget = passangerLossTarget;
+        passanger2Target = passangerWinTarget;
+        canPassangerMove = true;
+        canPassanger2Move = true;
+        StartHopping();
+        StartHopping2();
+        Debug.Log("You loose");
+        decisionPanel.GetComponent<SpriteRenderer>().sprite = decisionSprites[2];
+        gameDoorLeft.GetComponent<SpriteRenderer>().color = Color.red;
+        gameDoorRight.GetComponent<SpriteRenderer>().color = Color.red;
+    }
 
 }
