@@ -511,14 +511,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _showInfo: 1
-  _explanation: Switches to scene Game_05
+  _explanation: Switches to scene BombAndPets
   description: 
   enableAction: 1
   hasTags: 0
   actionTags: []
   hasConditions: 0
   actionConditions: []
-  sceneName: Game_05
+  sceneName: BombAndPets
 --- !u!114 &216637644
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -554,7 +554,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _showInfo: 1
-  _explanation: "Every frame:\n At 1.5 seconds, \n          switches to scene Game_05\n"
+  _explanation: "Every frame:\n At 1.5 seconds, \n          switches to scene BombAndPets\n"
   description: 
   enableTrigger: 0
   allowRetrigger: 0
@@ -1045,7 +1045,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _showInfo: 1
-  _explanation: Sets variable gameTime to 11
+  _explanation: Sets variable gameTime to 6
   description: 
   enableAction: 1
   hasTags: 0
@@ -1055,7 +1055,7 @@ MonoBehaviour:
   valueHandler: {fileID: 0}
   variable: {fileID: 11400000, guid: e0b4a87c2337be44fb172b40080c2a0d, type: 2}
   operation: 1
-  changeValue: 11
+  changeValue: 6
   changeValueHandler: {fileID: 0}
   changeVariable: {fileID: 0}
   scaleWithTime: 0
@@ -1073,7 +1073,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _showInfo: 1
   _explanation: "Reset Game Time Variable and start countdown.\n----------------\nWhen
-    this object is created:\n          sets variable gameTime to 11\n          enables
+    this object is created:\n          sets variable gameTime to 6\n          enables
     trigger Game Timer.Every frame\n"
   description: Reset Game Time Variable and start countdown.
   enableTrigger: 1
@@ -1611,7 +1611,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 5
-  m_Sprite: {fileID: 3065676760167002219, guid: e8fe9aee33db25841bd73b7d72e93e4c, type: 3}
+  m_Sprite: {fileID: -4580562959296617926, guid: 463b6a58f32c046529b434e62dfcfb24, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -2238,7 +2238,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1158645845}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -2363,7 +2363,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1158746585}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ac24d8e98e97620458dc0c6fbe26a958, type: 3}
   m_Name: 
@@ -2457,7 +2457,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1158746585}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 92c8e5ca8f3d04141b3e3ca48a91ebb3, type: 3}
   m_Name: 
@@ -2537,14 +2537,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _showInfo: 1
-  _explanation: Switches to scene Game_05
+  _explanation: Switches to scene BombAndPets
   description: 
   enableAction: 1
   hasTags: 0
   actionTags: []
   hasConditions: 0
   actionConditions: []
-  sceneName: Game_05
+  sceneName: BombAndPets
 --- !u!114 &1158746596
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2558,7 +2558,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _showInfo: 1
-  _explanation: "Every frame:\n At 1.5 seconds, \n          switches to scene Game_05\n"
+  _explanation: "Every frame:\n At 1.5 seconds, \n          switches to scene BombAndPets\n"
   description: 
   enableTrigger: 0
   allowRetrigger: 0
@@ -2596,7 +2596,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1158746585}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f6c4cd7728b890f44ab45fb8ca143d36, type: 3}
   m_Name: 
@@ -2657,7 +2657,9 @@ GameObject:
   - component: {fileID: 1229239619}
   - component: {fileID: 1229239624}
   - component: {fileID: 1229239627}
+  - component: {fileID: 1229239628}
   - component: {fileID: 1229239626}
+  - component: {fileID: 1229239629}
   m_Layer: 0
   m_Name: Cursor
   m_TagString: Untagged
@@ -2836,18 +2838,6 @@ MonoBehaviour:
   unityEvent:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1158645847}
-        m_TargetAssemblyTypeName: BombAndPetGameManager, Assembly-CSharp
-        m_MethodName: Lose
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
       - m_Target: {fileID: 2092516295}
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
@@ -2870,7 +2860,7 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
-          m_BoolArgument: 1
+          m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1229239627
 MonoBehaviour:
@@ -2886,7 +2876,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _showInfo: 1
   _explanation: "When a collision with a trigger with tags [Gift] starts:\n         
-    execute Unity event\n"
+    shakes the object [Main Camera] with intensity 1 for 0.2 seconds\n          execute
+    Unity event\n then, at 0.5 seconds, \n          execute Unity event\n"
   description: 
   enableTrigger: 1
   allowRetrigger: 1
@@ -2894,11 +2885,74 @@ MonoBehaviour:
   preConditions: []
   actions:
   - delay: 0
+    action: {fileID: 1229239629}
+  - delay: 0
+    action: {fileID: 1229239628}
+  - delay: 0.5
     action: {fileID: 1229239626}
   isTrigger: 1
   eventType: 0
   tags:
   - {fileID: 11400000, guid: d5911ce955c4444d79593c612b892b9b, type: 2}
+--- !u!114 &1229239628
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1229239618}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7770dfe0b94ccf643bfc83ed5044b8a4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _showInfo: 1
+  _explanation: Execute Unity event
+  description: 
+  enableAction: 1
+  hasTags: 0
+  actionTags: []
+  hasConditions: 0
+  actionConditions: []
+  unityEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1158645847}
+        m_TargetAssemblyTypeName: BombAndPetGameManager, Assembly-CSharp
+        m_MethodName: Lose
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &1229239629
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1229239618}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 901970b618aa1c4489b6c7410f963e95, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _showInfo: 1
+  _explanation: Shakes the object [Main Camera] with intensity 1 for 0.2 seconds
+  description: 
+  enableAction: 1
+  hasTags: 0
+  actionTags: []
+  hasConditions: 0
+  actionConditions: []
+  targetTag: {fileID: 0}
+  targetObject: {fileID: 330585546}
+  strength: 1
+  duration: 0.2
 --- !u!1 &1256956834
 GameObject:
   m_ObjectHideFlags: 0
@@ -3359,6 +3413,7 @@ GameObject:
   - component: {fileID: 1557577566}
   - component: {fileID: 1557577565}
   - component: {fileID: 1557577568}
+  - component: {fileID: 1557577569}
   m_Layer: 0
   m_Name: Ground
   m_TagString: Untagged
@@ -3548,13 +3603,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _showInfo: 1
   _explanation: "When a collision with a trigger with tags [Bomb] starts:\n         
-    execute Unity event\n then, at 0.5 seconds, \n          execute Unity event\n"
+    shakes the object [Main Camera] with intensity 1 for 0.2 seconds\n          execute
+    Unity event\n then, at 0.5 seconds, \n          execute Unity event\n"
   description: 
   enableTrigger: 1
   allowRetrigger: 1
   hasPreconditions: 0
   preConditions: []
   actions:
+  - delay: 0
+    action: {fileID: 1557577569}
   - delay: 0
     action: {fileID: 1557577565}
   - delay: 0.5
@@ -3635,8 +3693,32 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
-          m_BoolArgument: 1
+          m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &1557577569
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1557577560}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 901970b618aa1c4489b6c7410f963e95, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _showInfo: 1
+  _explanation: Shakes the object [Main Camera] with intensity 1 for 0.2 seconds
+  description: 
+  enableAction: 1
+  hasTags: 0
+  actionTags: []
+  hasConditions: 0
+  actionConditions: []
+  targetTag: {fileID: 0}
+  targetObject: {fileID: 330585546}
+  strength: 1
+  duration: 0.2
 --- !u!1 &1836674448
 GameObject:
   m_ObjectHideFlags: 0
