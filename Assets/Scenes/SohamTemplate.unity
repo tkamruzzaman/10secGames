@@ -3251,6 +3251,7 @@ GameObject:
   - component: {fileID: 1310726375}
   - component: {fileID: 1310726374}
   - component: {fileID: 1310726373}
+  - component: {fileID: 1310726378}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -3417,6 +3418,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1097278432}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1310726378
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1310726372}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd7998d335e387f4faa6eefa60f20d1c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  breathScale: {x: 0.6, y: 0.6, z: 0.6}
+  breathDuration: 0.4
 --- !u!1 &1329685909
 GameObject:
   m_ObjectHideFlags: 0
@@ -3956,7 +3971,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1607824455}
   - component: {fileID: 1607824460}
-  - component: {fileID: 1607824459}
   - component: {fileID: 1607824458}
   - component: {fileID: 1607824457}
   - component: {fileID: 1607824456}
@@ -4055,29 +4069,6 @@ MonoBehaviour:
   initialDelayEnable: 0
   initialDelay: {x: 5, y: 5}
   timeInterval: {x: 2, y: 2}
---- !u!114 &1607824459
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1607824454}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 766d16681200cf841a49e1df59f6076f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _showInfo: 1
-  _explanation: Plays sound prompt at volume 1 and at pitch 1
-  description: 
-  enableAction: 1
-  hasTags: 0
-  actionTags: []
-  hasConditions: 0
-  actionConditions: []
-  clip: {fileID: 8300000, guid: f29eb08a6fce9e54db075aa85dca9e92, type: 3}
-  volume: {x: 1, y: 1}
-  pitch: {x: 1, y: 1}
 --- !u!114 &1607824460
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4091,8 +4082,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _showInfo: 1
-  _explanation: "When this object is created:\n          plays sound prompt at volume
-    1 and at pitch 1\n"
+  _explanation: "When this object is created:\n          [NULL]\n"
   description: 
   enableTrigger: 1
   allowRetrigger: 0
@@ -4100,7 +4090,7 @@ MonoBehaviour:
   preConditions: []
   actions:
   - delay: 0
-    action: {fileID: 1607824459}
+    action: {fileID: 0}
 --- !u!1 &1631653738
 GameObject:
   m_ObjectHideFlags: 0

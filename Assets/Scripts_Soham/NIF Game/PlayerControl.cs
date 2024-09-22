@@ -103,6 +103,7 @@ public class PlayerControl : MonoBehaviour
 
     public void GameLost()
     {
+        this.GetComponent<BreathingEffect>().enabled = true;
         SoundManager.instance.PlayLoseClip();
         universalGameController.GetComponent<GameManager>().enabled = true;
         GameManager.instance.isWinCondition = false;
