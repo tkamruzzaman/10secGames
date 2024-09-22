@@ -43,6 +43,7 @@ public class PlayerControl : MonoBehaviour
 
     void StartDash()
     {
+        SoundManager.instance.PlayActionClip();
         isDashing = true;
         dashTimeLeft = dashDuration;
         spriteRenderer.sprite = attackSprites[Random.Range(0, attackSprites.Length)];
@@ -87,6 +88,7 @@ public class PlayerControl : MonoBehaviour
 
     public void GameWon()
     {
+        SoundManager.instance.PlayWinClip();
         universalGameController.GetComponent<GameManager>().enabled = true;
         GameManager.instance.isWinCondition = true;
         spriteRenderer.sprite = victorySprite;
@@ -100,6 +102,7 @@ public class PlayerControl : MonoBehaviour
 
     public void GameLost()
     {
+        SoundManager.instance.PlayLoseClip();
         universalGameController.GetComponent<GameManager>().enabled = true;
         GameManager.instance.isWinCondition = false;
 

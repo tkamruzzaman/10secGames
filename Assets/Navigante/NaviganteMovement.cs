@@ -64,6 +64,8 @@ public class NaviganteMovement : MonoBehaviour
             isPaused = true;
             if (insideTheBox)
             {
+
+                SoundManager.instance.PlayWinClip();
                 GameManager.instance.isWinCondition = true;
                 SlideDoorLeft(gameDoorRight, 3,0.5f);
                 SlideDoorRight(gameDoorLeft, 3,0.5f);
@@ -241,6 +243,7 @@ public class NaviganteMovement : MonoBehaviour
 
     void YouLose()
     {
+        SoundManager.instance.PlayLoseClip();
         GameManager.instance.isWinCondition = false;
         SlideDoorLeft(gameDoorRight, 0.1f, 0.5f);
         SlideDoorRight(gameDoorLeft, 0.1f, 0.5f);
@@ -254,6 +257,7 @@ public class NaviganteMovement : MonoBehaviour
         decisionPanel.GetComponent<SpriteRenderer>().sprite = decisionSprites[2];
         gameDoorLeft.GetComponent<SpriteRenderer>().color = Color.red;
         gameDoorRight.GetComponent<SpriteRenderer>().color = Color.red;
+        SoundManager.instance.PlayMiscClip();   
     }
 
 }

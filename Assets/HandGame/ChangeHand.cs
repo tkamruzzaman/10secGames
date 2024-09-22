@@ -117,6 +117,7 @@ public class ChangeHand : MonoBehaviour
 
     public void YouWin()
     {
+        SoundManager.instance.PlayWinClip();
         GameManager.instance.isWinCondition = true;
         shouldMove = false;
         IsHandFixed = true;
@@ -131,6 +132,8 @@ public class ChangeHand : MonoBehaviour
 
     public void YouLose()
     {
+
+        SoundManager.instance.PlayLoseClip();
         GameManager.instance.isWinCondition = false;
         IsHandFixed = true;
         shouldMove = false;

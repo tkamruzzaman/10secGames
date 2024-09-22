@@ -45,6 +45,8 @@ public class BombAndPetGameManager : MonoBehaviour
     }
 
     public void Win(){
+
+        SoundManager.instance.PlayWinClip();
         spawner.enabled = false;
         foreach (Transform T in spawner.transform) { 
             Destroy(T.gameObject);
@@ -56,6 +58,8 @@ public class BombAndPetGameManager : MonoBehaviour
     }
 
     public void Lose(){
+
+        SoundManager.instance.PlayLoseClip();
         spawner.enabled = false;
         isPaused = true;
         GameManager.instance.isWinCondition = false;
