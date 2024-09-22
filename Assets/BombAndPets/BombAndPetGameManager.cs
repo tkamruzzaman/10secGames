@@ -1,3 +1,4 @@
+using OkapiKit;
 using UnityEngine;
 
 public class BombAndPetGameManager : MonoBehaviour
@@ -6,9 +7,21 @@ public class BombAndPetGameManager : MonoBehaviour
 
     [SerializeField]
     Sprite winSprite;
-    
+
+    [SerializeField]
+    Sprite loseSprite;
+
     [SerializeField]
     GameObject DecisionPanel;
+
+    [SerializeField]
+    Spawner spawner;
+
+    [SerializeField]
+    GameObject boom;
+
+    [SerializeField]
+    GameObject cursor;
 
     bool isPaused = false;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -32,13 +45,22 @@ public class BombAndPetGameManager : MonoBehaviour
     }
 
     public void Win(){
+        spawner.enabled = false;
+        foreach (Transform T in spawner.transform) { 
+            Destroy(T.gameObject);
+        }
         isPaused = true;
         GameManager.instance.isWinCondition = true;
         DecisionPanel.GetComponent<SpriteRenderer>().sprite = winSprite;
+        cursor.SetActive(false);
     }
 
     public void Lose(){
+        spawner.enabled = false;
         isPaused = true;
         GameManager.instance.isWinCondition = false;
+        DecisionPanel.GetComponent<SpriteRenderer>().sprite = loseSprite;
+        boom.SetActive(true);
+        cursor.SetActive(false);
     }
 }

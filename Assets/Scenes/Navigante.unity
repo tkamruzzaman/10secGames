@@ -878,6 +878,7 @@ MonoBehaviour:
   isWinCondition: 0
   LifeCounter: 5
   timer: {fileID: 1213252092}
+  dontShowTimer: 0
 --- !u!1 &358413620
 GameObject:
   m_ObjectHideFlags: 0
@@ -2634,11 +2635,11 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 923577551}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 1, y: 0}
-  m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -20.599976, y: 0}
+  m_AnchorMin: {x: 1, y: 1}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: -5.799988, y: -59.1}
   m_SizeDelta: {x: 200, y: 50}
-  m_Pivot: {x: 1, y: 0}
+  m_Pivot: {x: 1, y: 1}
 --- !u!114 &1213252092
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2661,8 +2662,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: 4
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 1405b4b6bc2d2364bafb8c99113a71b7, type: 2}
-  m_sharedMaterial: {fileID: 2353668985335059992, guid: 1405b4b6bc2d2364bafb8c99113a71b7, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 5cc0ea3942c5eab43aef19ade8c59cc7, type: 2}
+  m_sharedMaterial: {fileID: 3192729556822083771, guid: 5cc0ea3942c5eab43aef19ade8c59cc7, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
