@@ -19,7 +19,8 @@ public class PlayerControl : MonoBehaviour
     public Sprite normalBackground;           // The normal background during gameplay
     public Sprite victoryBackground;          // The background to show when the player wins
     public Sprite defeatBackground;           // The background to show when the player loses
-
+    [SerializeField]
+    GameObject universalGameController;
     void Start()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
@@ -86,6 +87,8 @@ public class PlayerControl : MonoBehaviour
 
     public void GameWon()
     {
+        universalGameController.GetComponent<GameManager>().enabled = true;
+        GameManager.instance.isWinCondition = true;
         spriteRenderer.sprite = victorySprite;
         // Change background to victory background
         if (backgroundImage != null && victoryBackground != null)
@@ -97,6 +100,9 @@ public class PlayerControl : MonoBehaviour
 
     public void GameLost()
     {
+        universalGameController.GetComponent<GameManager>().enabled = true;
+        GameManager.instance.isWinCondition = false;
+
         spriteRenderer.sprite = defeatSprite;
         // Change background to the defeat background
         if (backgroundImage != null && defeatBackground != null)
