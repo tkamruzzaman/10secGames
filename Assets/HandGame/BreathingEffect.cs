@@ -13,4 +13,11 @@ public class BreathingEffect : MonoBehaviour
             .SetEase(Ease.InOutQuad)  // Smooth easing for a natural feel
             .SetLoops(-1, LoopType.Yoyo);  // Loop indefinitely with a Yoyo effect (back and forth)
     }
+
+    private void OnEnable()
+    {
+        transform.DOScale(breathScale, breathDuration)
+            .SetEase(Ease.InOutQuad)  // Smooth easing for a natural feel
+            .SetLoops(-1, LoopType.Yoyo);
+    }
 }

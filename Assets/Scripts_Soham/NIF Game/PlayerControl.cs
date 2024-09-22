@@ -88,6 +88,7 @@ public class PlayerControl : MonoBehaviour
 
     public void GameWon()
     {
+        this.GetComponent<BreathingEffect>().enabled = true;
         SoundManager.instance.PlayWinClip();
         universalGameController.GetComponent<GameManager>().enabled = true;
         GameManager.instance.isWinCondition = true;

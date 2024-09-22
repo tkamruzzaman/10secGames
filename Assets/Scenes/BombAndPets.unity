@@ -129,6 +129,7 @@ GameObject:
   - component: {fileID: 46113282}
   - component: {fileID: 46113281}
   - component: {fileID: 46113280}
+  - component: {fileID: 46113283}
   m_Layer: 0
   m_Name: game_pet2_A_0
   m_TagString: Untagged
@@ -228,6 +229,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 180619709}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &46113283
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 46113279}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd7998d335e387f4faa6eefa60f20d1c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  breathScale: {x: 1.05, y: 1.05, z: 1.05}
+  breathDuration: 0.4
 --- !u!1 &79459422
 GameObject:
   m_ObjectHideFlags: 0
@@ -630,6 +645,7 @@ GameObject:
   - component: {fileID: 273776709}
   - component: {fileID: 273776708}
   - component: {fileID: 273776707}
+  - component: {fileID: 273776710}
   m_Layer: 0
   m_Name: game_pet1_A_0
   m_TagString: Untagged
@@ -729,6 +745,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 180619709}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &273776710
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 273776706}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd7998d335e387f4faa6eefa60f20d1c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  breathScale: {x: 1.05, y: 1.05, z: 1.05}
+  breathDuration: 0.4
 --- !u!1 &309957324
 GameObject:
   m_ObjectHideFlags: 0
@@ -835,7 +865,7 @@ MonoBehaviour:
   m_margin: {x: -109.34239, y: -56.308014, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 1
+  m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &309957326
@@ -876,6 +906,7 @@ GameObject:
   - component: {fileID: 317423348}
   - component: {fileID: 317423347}
   - component: {fileID: 317423346}
+  - component: {fileID: 317423349}
   m_Layer: 0
   m_Name: game_pet3_A_0
   m_TagString: Untagged
@@ -975,6 +1006,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 180619709}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &317423349
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 317423345}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd7998d335e387f4faa6eefa60f20d1c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  breathScale: {x: 1.05, y: 1.05, z: 1.05}
+  breathDuration: 0.4
 --- !u!1 &330585543
 GameObject:
   m_ObjectHideFlags: 0
@@ -1870,6 +1915,7 @@ GameObject:
   - component: {fileID: 802468396}
   - component: {fileID: 802468395}
   - component: {fileID: 802468394}
+  - component: {fileID: 802468397}
   m_Layer: 0
   m_Name: game_pet4_A_0
   m_TagString: Untagged
@@ -1969,6 +2015,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 180619709}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &802468397
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 802468393}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd7998d335e387f4faa6eefa60f20d1c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  breathScale: {x: 1.05, y: 1.05, z: 1.05}
+  breathDuration: 0.4
 --- !u!1 &832575517
 GameObject:
   m_ObjectHideFlags: 0
@@ -2158,6 +2218,7 @@ GameObject:
   - component: {fileID: 1044747933}
   - component: {fileID: 1044747932}
   - component: {fileID: 1044747931}
+  - component: {fileID: 1044747934}
   m_Layer: 0
   m_Name: game_pet5_A_0
   m_TagString: Untagged
@@ -2257,6 +2318,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 180619709}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1044747934
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1044747930}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd7998d335e387f4faa6eefa60f20d1c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  breathScale: {x: 1.05, y: 1.05, z: 1.05}
+  breathDuration: 0.4
 --- !u!1 &1158645845
 GameObject:
   m_ObjectHideFlags: 0
@@ -2318,6 +2393,12 @@ MonoBehaviour:
   spawner: {fileID: 2005213069}
   boom: {fileID: 1587953843}
   cursor: {fileID: 1229239618}
+  pets:
+  - {fileID: 273776706}
+  - {fileID: 46113279}
+  - {fileID: 317423345}
+  - {fileID: 802468393}
+  - {fileID: 1044747930}
 --- !u!114 &1158645848
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3891,7 +3972,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f5a052484ca3784da0973f901fcf9e5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  winClip: {fileID: 8300000, guid: 5d06c7cc42ade914ba51702e2e2d5e51, type: 3}
+  winClip: {fileID: 8300000, guid: 511e38bfca9aa9f4eab75ebc4eb29439, type: 3}
   looseClip: {fileID: 8300000, guid: 338189aeb7706ce4a8d237c6120b4aa0, type: 3}
   miscClip: {fileID: 0}
   actionClip: {fileID: 0}

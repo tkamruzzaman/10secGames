@@ -1,4 +1,6 @@
+using NUnit.Framework;
 using OkapiKit;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class BombAndPetGameManager : MonoBehaviour
@@ -23,6 +25,10 @@ public class BombAndPetGameManager : MonoBehaviour
     [SerializeField]
     GameObject cursor;
 
+
+    [SerializeField]
+    List<GameObject> pets;
+
     bool isPaused = false;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -45,7 +51,10 @@ public class BombAndPetGameManager : MonoBehaviour
     }
 
     public void Win(){
-
+        foreach (GameObject gm in pets)
+        {
+            gm.GetComponent<BreathingEffect>().enabled = true;
+        }
         SoundManager.instance.PlayWinClip();
         spawner.enabled = false;
         foreach (Transform T in spawner.transform) { 
@@ -55,6 +64,12 @@ public class BombAndPetGameManager : MonoBehaviour
         GameManager.instance.isWinCondition = true;
         DecisionPanel.GetComponent<SpriteRenderer>().sprite = winSprite;
         cursor.SetActive(false);
+
+        foreach (GameObject gm in pets)
+        {
+            gm.GetComponent<BreathingEffect>().enabled = true;   
+        }
+
     }
 
     public void Lose(){
