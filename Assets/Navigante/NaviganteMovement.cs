@@ -57,7 +57,7 @@ public class NaviganteMovement : MonoBehaviour
             isPaused = true;
             if (insideTheBox)
             {
-
+                GameManager.instance.isWinCondition = true;
                 SlideDoorLeft(gameDoorRight, 3,0.5f);
                 SlideDoorRight(gameDoorLeft, 3,0.5f);
                 passangerTarget = passangerWinTarget;
@@ -79,6 +79,7 @@ public class NaviganteMovement : MonoBehaviour
             }
             else
             {
+                GameManager.instance.isWinCondition = false;
                 SlideDoorLeft(gameDoorRight, 0.1f, 0.5f);
                 SlideDoorRight(gameDoorLeft, 0.1f, 0.5f);
                 passangerTarget = passangerLossTarget;

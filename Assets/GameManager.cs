@@ -23,7 +23,7 @@ public class GameManager : MonoBehaviour
     public int LifeCounter=5;
 
     public TextMeshProUGUI timer;
-    
+    int i = 0;
 
     void Start()
     {
@@ -81,7 +81,23 @@ public class GameManager : MonoBehaviour
     // Example of a function that will be called when the timer ends
     private void YourFunction()
     {
-        StartCoroutine(LoadSceneAfterSomeTime(Random.Range(0, SceneManager.sceneCountInBuildSettings)));
+        if (isWinCondition)
+        {
+            if (SceneManager.GetActiveScene().buildIndex+1>=SceneManager.sceneCountInBuildSettings) {
+
+                i = 1;
+            }
+            else
+            {
+                i = SceneManager.GetActiveScene().buildIndex+1;
+            }
+            StartCoroutine(LoadSceneAfterSomeTime(i));
+        }
+        else
+        {
+            StartCoroutine(LoadSceneAfterSomeTime(SceneManager.GetActiveScene().buildIndex));
+        }
+        
         // Add your custom code here
     }
 

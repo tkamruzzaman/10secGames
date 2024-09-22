@@ -117,6 +117,7 @@ public class ChangeHand : MonoBehaviour
 
     public void YouWin()
     {
+        GameManager.instance.isWinCondition = true;
         shouldMove = false;
         IsHandFixed = true;
         decisionpanel.GetComponent<SpriteRenderer>().sprite = decisionSprites[1];
@@ -130,6 +131,7 @@ public class ChangeHand : MonoBehaviour
 
     public void YouLose()
     {
+        GameManager.instance.isWinCondition = false;
         IsHandFixed = true;
         shouldMove = false;
         decisionpanel.GetComponent<SpriteRenderer>().sprite = decisionSprites[2];
