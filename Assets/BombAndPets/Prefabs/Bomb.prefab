@@ -4852,6 +4852,7 @@ GameObject:
   - component: {fileID: 8549609790180012096}
   - component: {fileID: 8859867164134848681}
   - component: {fileID: -6120077261391903649}
+  - component: {fileID: -229292305698587792}
   m_Layer: 0
   m_Name: Bomb
   m_TagString: Untagged
@@ -5070,9 +5071,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _showInfo: 1
   _explanation: "When a collision with a trigger with tags [Ground,Cursor] starts:\n         
-    disables component Bomb (UnityEngine.BoxCollider2D)\n          play particle
-    system FX_Fireworks_Yellow_Small\n then, at 0.2 seconds, \n          disables
-    object Bomb_body\n then, at 0.5 seconds, \n          destroys this object\n"
+    plays sound Pet Game Bomb at volume 1 and at pitch 1\n          disables component
+    Bomb (UnityEngine.BoxCollider2D)\n          play particle system FX_Fireworks_Yellow_Small\n
+    then, at 0.2 seconds, \n          disables object Bomb_body\n then, at 0.5 seconds,
+    \n          destroys this object\n"
   description: 
   enableTrigger: 1
   allowRetrigger: 1
@@ -5096,6 +5098,8 @@ MonoBehaviour:
     comparisonVariable: {fileID: 0}
     percentageCompare: 0
   actions:
+  - delay: 0
+    action: {fileID: -229292305698587792}
   - delay: 0
     action: {fileID: -6120077261391903649}
   - delay: 0
@@ -5131,6 +5135,29 @@ MonoBehaviour:
   actionConditions: []
   target: {fileID: 6501710302272725491}
   state: 1
+--- !u!114 &-229292305698587792
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1136350108079003057}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 766d16681200cf841a49e1df59f6076f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _showInfo: 1
+  _explanation: Plays sound Pet Game Bomb at volume 1 and at pitch 1
+  description: 
+  enableAction: 1
+  hasTags: 0
+  actionTags: []
+  hasConditions: 0
+  actionConditions: []
+  clip: {fileID: 8300000, guid: f33ad0ebbd40e40ffbc953c19fb5b3ac, type: 3}
+  volume: {x: 1, y: 1}
+  pitch: {x: 1, y: 1}
 --- !u!1 &1846272218355067507
 GameObject:
   m_ObjectHideFlags: 0

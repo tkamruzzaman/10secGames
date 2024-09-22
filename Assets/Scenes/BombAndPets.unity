@@ -343,11 +343,11 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 681066607}
+  m_Father: {fileID: 1418234368}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: -187.99988, y: 54.00003}
+  m_AnchoredPosition: {x: 433.88208, y: 31.00003}
   m_SizeDelta: {x: 1600, y: 500}
   m_Pivot: {x: 1, y: 0.5}
 --- !u!114 &165528018
@@ -444,8 +444,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 97.73
-  m_fontSizeBase: 97.73
+  m_fontSize: 111.44
+  m_fontSizeBase: 111.44
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -892,7 +892,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -10.900024, y: -65.100006}
+  m_AnchoredPosition: {x: -10.899902, y: -65.099976}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 1, y: 1}
 --- !u!1 &317423345
@@ -1638,7 +1638,6 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1418234368}
-  - {fileID: 165528017}
   m_Father: {fileID: 249055667}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -2349,7 +2348,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1158645846
 Transform:
   m_ObjectHideFlags: 0
@@ -2466,6 +2465,7 @@ GameObject:
   - component: {fileID: 1229239628}
   - component: {fileID: 1229239626}
   - component: {fileID: 1229239629}
+  - component: {fileID: 1229239630}
   m_Layer: 0
   m_Name: Cursor
   m_TagString: Untagged
@@ -2670,14 +2670,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _showInfo: 1
   _explanation: "When a collision with a trigger with tags [Gift] starts:\n         
-    shakes the object [Main Camera] with intensity 1 for 0.2 seconds\n          execute
-    Unity event\n then, at 0.5 seconds, \n          execute Unity event\n"
+    plays sound Pet Game Bomb at volume 1 and at pitch 1\n          shakes the object
+    [Main Camera] with intensity 1 for 0.2 seconds\n          execute Unity event\n
+    then, at 0.5 seconds, \n          execute Unity event\n"
   description: 
   enableTrigger: 1
   allowRetrigger: 1
   hasPreconditions: 0
   preConditions: []
   actions:
+  - delay: 0
+    action: {fileID: 1229239630}
   - delay: 0
     action: {fileID: 1229239629}
   - delay: 0
@@ -2747,6 +2750,29 @@ MonoBehaviour:
   targetObject: {fileID: 330585546}
   strength: 1
   duration: 0.2
+--- !u!114 &1229239630
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1229239618}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 766d16681200cf841a49e1df59f6076f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _showInfo: 1
+  _explanation: Plays sound Pet Game Bomb at volume 1 and at pitch 1
+  description: 
+  enableAction: 1
+  hasTags: 0
+  actionTags: []
+  hasConditions: 0
+  actionConditions: []
+  clip: {fileID: 8300000, guid: f33ad0ebbd40e40ffbc953c19fb5b3ac, type: 3}
+  volume: {x: 1, y: 1}
+  pitch: {x: 1, y: 1}
 --- !u!1 &1418234367
 GameObject:
   m_ObjectHideFlags: 0
@@ -2777,7 +2803,8 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 165528017}
   m_Father: {fileID: 681066607}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -3480,7 +3507,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1985038272
 Transform:
   m_ObjectHideFlags: 0
@@ -3840,6 +3867,7 @@ GameObject:
   - component: {fileID: 2076962831}
   - component: {fileID: 2076962833}
   - component: {fileID: 2076962832}
+  - component: {fileID: 2076962834}
   m_Layer: 0
   m_Name: SoundManager
   m_TagString: Untagged
@@ -3855,8 +3883,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2076962830}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 866.2436, y: 519.5038, z: -0.7884592}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -3976,6 +4004,22 @@ MonoBehaviour:
   looseClip: {fileID: 8300000, guid: 338189aeb7706ce4a8d237c6120b4aa0, type: 3}
   miscClip: {fileID: 0}
   actionClip: {fileID: 0}
+--- !u!114 &2076962834
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2076962830}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d2693f9c8caf81046837996718175889, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _showInfo: 1
+  _explanation: This system is responsible for playing all sounds in the game
+  description: 
+  defaultMixerOutput: {fileID: 24300002, guid: e9aed34453b548d4085ec69036fbc6aa, type: 2}
 --- !u!1 &2092516295
 GameObject:
   m_ObjectHideFlags: 0
